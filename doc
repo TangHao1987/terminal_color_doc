@@ -1,9 +1,35 @@
-#### Git cheat sheet
+# Git cheat sheet
 
-### CONFIGURE TOOLING
-## Configure user information for all local repositories
-
-- $ git config --global --edit
+## CONFIGURE TOOLING
+### How to directly edit git configuration file
 Edits global git config file
-- $ git config --local --edit
+- $ git config --global --edit
+
 Edits local git config file
+- $ git config --local --edit
+
+### Configure user information for all local repositories
+Enables helpful colorization of command line output
+- $ git config --global color.ui auto
+
+## CREATE REPOSITORIES
+### Start a new repository or obtain one from an existing URL
+Creates a new local repository with the specified name
+- $ git init [project-name]
+
+Downloads a project and its entire version history
+- $ git clone [url]
+
+## MAKE CHANGES
+### Review edits and craf a commit transaction
+Lists all new or modified files to be commited
+- $ git status
+
+Shows file differences not yet staged
+- $ git diff
+
+Snapshots the file in preparation for versioning
+- git add [file]
+
+Shows file differences between staging and the last file version
+- git diff --staged

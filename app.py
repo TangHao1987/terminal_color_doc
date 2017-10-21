@@ -6,7 +6,7 @@ def main():
     with open('./color_define.csv', 'rt') as color_define:
         reader = csv.reader(color_define)
         for row in reader:
-            color_dict[row[0]] = (row[1], row[2])
+            color_dict[row[0]] = row[1]
 
     config = {}
     with open('./terminal_config.csv', 'rt') as config_define:
@@ -32,7 +32,7 @@ def print_line(text, config_obj):
     if config_obj is None:
         print(text)
     else:
-        print('\x1b[{0};{1}m{2}\x1b[0m'.format(config_obj[1], config_obj[0], text))
+        print('\x1b[{0}m{1}\x1b[0m'.format(config_obj, text))
 
 
 if __name__ == "__main__":

@@ -1,5 +1,4 @@
-####,red_bold
-###,green_bold
-##,teal
-#,green
--,white_bold
+###,white_bold
+##,teal_bold
+#,red_bold
+-,code

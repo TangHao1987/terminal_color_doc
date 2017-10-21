@@ -1,7 +1,9 @@
-red_bold,31,1
-red,31,0
-green_bold,32,1
-green,32,0
-white_bold,37,1
-white,37,0
-teal,36,0
+red_bold,1;31
+red,0;31
+green_bold,1;32
+green,1;32
+white_bold,1;37
+white,0;37
+teal_bold,1;36
+teal,0;36
+code,1;49;94
