@@ -1,0 +1,9 @@
+#### Git cheat sheet
+
+### CONFIGURE TOOLING
+## Configure user information for all local repositories
+
+- $ git config --global --edit
+Edits global git config file
+- $ git config --local --edit
+Edits local git config file
