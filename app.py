@@ -1,19 +1,23 @@
 import csv
+import os
 
+__location__ = os.path.realpath(
+        os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
 def main():
+
     color_dict = {}
-    with open('./color_define.csv', 'rt') as color_define:
+    with open(os.path.join(__location__, 'color_define.csv'), 'rt') as color_define:
         reader = csv.reader(color_define)
         for row in reader:
             color_dict[row[0]] = row[1]
 
     config = {}
-    with open('./terminal_config.csv', 'rt') as config_define:
+    with open(os.path.join(__location__, 'terminal_config.csv'), 'rt') as config_define:
         reader = csv.reader(config_define)
         for row in reader:
             config[row[0]] = color_dict.get(row[1])
-    with open('./doc', 'rt') as input:
+    with open(os.path.join(__location__, 'doc'), 'rt') as input:
         lines = input.readlines()
         for line in lines:
             split_index = line.find(" ")
